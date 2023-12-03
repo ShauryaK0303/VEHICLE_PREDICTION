@@ -8,9 +8,9 @@ with open('final_model1.pkl', 'rb') as model_file:
 
 def main():
     st.set_page_config(page_title="Vehicle Insurance Prediction", page_icon="🚗")
-
     st.title("Vehicle Insurance Prediction")
-    st.markdown("---")
+    #st.markdown("---")
+    st.image("ins1.jpeg", use_column_width=True)
 
     st.sidebar.header("User Input")
 
@@ -20,6 +20,7 @@ def main():
     previously_insured = st.sidebar.radio("Previously Insured", ["Yes", "No"])
     vehicle_damage = st.sidebar.radio("Vehicle Damage in the Past", ["Yes", "No"])
     vehicle_age = st.sidebar.radio("Vehicle Age", ["< 1 Year", "1-2 Year", " >2 Years"])
+
 
     gender_mapping = {"Male": 0, "Female": 1}
     previously_insured_mapping = {"Yes": 1, "No": 0}
@@ -34,6 +35,7 @@ def main():
     user_data = [[gender, age, previously_insured, vehicle_damage, vehicle_age]]
     prediction = model.predict(user_data)
 
+    # Display the result
     st.markdown("---")
     st.subheader("Prediction Result:")
     result = "Interested in vehicle insurance." if prediction[0] == 1 else "Not interested in vehicle insurance."
