@@ -10,7 +10,7 @@ def main():
     st.set_page_config(page_title="Vehicle Insurance Prediction", page_icon="🚗")
     st.title("Vehicle Insurance Prediction")
     #st.markdown("---")
-    st.image("ins1.jpeg", use_column_width=True)
+    st.image("10003277.jpg", use_column_width=True)
 
     st.sidebar.header("User Input")
 
