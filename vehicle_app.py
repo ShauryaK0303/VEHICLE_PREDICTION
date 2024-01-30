@@ -43,8 +43,7 @@ def main():
 
     st.markdown("---")
     st.write(
-        "Developed by: SHAURYA KUSHWAH\n"
-                           "04119011921\n"
+        "Developed by: SHAURYA KUSHWAH"
                            
     )
 
